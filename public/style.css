@@ -103,6 +103,7 @@ main {
 }
 
 #pokemonDetails {
+    position:relative;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -156,11 +157,31 @@ main {
 }
 
 .close-button {
-    padding-block:5px;
-    padding-inline:8px;
+    font-size: 26px;
     border-radius: 50%;
 }
 .close-button:hover {
-    background-color: #dc2828;
     border-radius: 50%;
+    color:red;
+}
+
+.previous-btn {
+    position: absolute;
+    top:50%;
+    left:0;
+    font-size: 24px;
+    padding:8px;
+}
+
+.next-btn {
+    position: absolute;
+    top:50%;
+    right:0;
+    font-size: 24px;
+    padding:8px;
+
+}
+.previous-btn:hover, .next-btn:hover {
+    cursor: pointer;
+    color:red;
 }
