@@ -19,6 +19,9 @@ $router->map('GET', '/generation/[i:gen]', function($gen) use ($pokemonControlle
     $pokemonController->getPokemonsFromAPI($gen);
 });
 
+$router->map('GET', '/pokemon/[i:id]', function($id) use ($pokemonController) {
+    $pokemonController->getPokemonDetails($id);
+});
 
 
 $match = $router->match();

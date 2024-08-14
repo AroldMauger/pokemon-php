@@ -19,4 +19,9 @@ class PokemonController
 
         echo $this->twig->render("pokedex.html.twig", ["pokemons"=> $pokemons, "gen"=>$gen]);
     }
+
+    public function getPokemonDetails($id) {
+        $pokemonData = file_get_contents("https://pokebuildapi.fr/api/v1/pokemon/$id");
+        echo $pokemonData;
+    }
 }
