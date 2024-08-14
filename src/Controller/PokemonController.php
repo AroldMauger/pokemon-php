@@ -24,4 +24,5 @@ class PokemonController
         $pokemonData = file_get_contents("https://pokebuildapi.fr/api/v1/pokemon/$id");
         echo $pokemonData;
     }
+
 }

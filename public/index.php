@@ -3,6 +3,7 @@
 require_once "../vendor/autoload.php";
 
 use Pokedex\Controller\PokemonController;
+use Pokedex\Controller\UserController;
 
 $loader = new \Twig\Loader\FilesystemLoader('../src/Views');
 $twig = new \Twig\Environment($loader);
@@ -10,10 +11,17 @@ $twig = new \Twig\Environment($loader);
 $router = new AltoRouter();
 
 $pokemonController = new PokemonController($twig);
+$userController = new UserController($twig);
 
-$router->map('GET', '/', function() use ($pokemonController) {
+$router->map('GET', '/', function() use ($userController) {
+    $userController->displayLogin();
+});
+
+$router->map('GET', '/choice', function() use ($pokemonController) {
     $pokemonController->showGenerationChoice();
 });
+
+
 
 $router->map('GET', '/generation/[i:gen]', function($gen) use ($pokemonController) {
     $pokemonController->getPokemonsFromAPI($gen);

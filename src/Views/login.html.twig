@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POKEDEX</title>
+    <!-- Inclure Bootstrap CSS via CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="/logo.png" class="img-fluid my-4" id="logo" alt="Logo">
+
+</header>
+<main>
+
+    <form class="form-container">
+        <h2>CRÉER UN COMPTE UTILISATEUR</h2>
+        <div class="input-container">
+            <label for="username">Nom utilisateur</label>
+            <input type="text" id="username">
+        </div>
+        <div class="input-container">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password">
+        </div>
+        <div class="btn-container">
+            <button type="submit">Créer</button>
+        </div>
+    </form>
+
+
+    <form class="form-container">
+        <h2>SE CONNECTER</h2>
+        <div class="input-container">
+            <label for="log-user">Nom utilisateur</label>
+            <input type="text" id="log-user">
+        </div>
+        <div class="input-container">
+            <label for="log-password">Mot de passe</label>
+            <input type="password" id="log-password">
+        </div>
+        <div class="btn-container">
+            <button type="submit">Connexion</button>
+        </div>
+    </form>
+
+</main>
+<!-- Inclure Bootstrap JS et dépendances via CDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
