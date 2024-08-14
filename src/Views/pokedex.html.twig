@@ -11,19 +11,31 @@
 </head>
 <body>
 <header>
-    <nav>
+    <nav class="nav-bar">
+        <h1>Tous les pokémons de la génération {{ gen }}</h1>
         <a href="/">RETOUR</a>
     </nav>
 </header>
 
-<h1>Tous les pokémons de la génération {{ gen }}</h1>
+<div class="filter-container">
+    <select id="typeFilter">
+        <option value="">Tous les types</option>
+    </select>
+</div>
+
 
 <section class="all-pokemons">
     {% for pokemon in pokemons %}
-        <a href="#" class="pokemon-card" data-id="{{ pokemon.id }}">
-           <img src="{{ pokemon.image }}">
-            <p>{{ pokemon.name }}</p>
-        </a>
+        <div class="pokemon-container">
+            <span class="add-pokemon">+</span>
+
+            <a href="#" class="pokemon-card" data-id="{{ pokemon.id }}" data-types="{{ pokemon.apiTypes | map(type => type.name) | join(', ') }}">
+
+                <img src="{{ pokemon.image }}">
+                <p>{{ pokemon.name }}</p>
+            </a>
+        </div>
+
     {% endfor %}
 </section>
 
@@ -38,6 +50,7 @@
     </div>
 </div>
 
-<script src="/js/poke-modal.js"></script>
+<script src="/js/type-filter.js"></script>
+
 </body>
 </html>

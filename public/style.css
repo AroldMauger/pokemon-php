@@ -1,5 +1,31 @@
 /* POKEDEX.TWIG */
 
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
+}
+
+.nav-bar h1 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 26px;
+    margin:0px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    color:black;
+}
+
+.nav-bar a:hover {
+ color:red;
+}
+
 .all-pokemons{
     display: flex;
     flex-wrap: wrap;
@@ -40,8 +66,8 @@ main {
 }
 
 .gen-container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:4em;
 
 }
@@ -184,4 +210,60 @@ main {
 .previous-btn:hover, .next-btn:hover {
     cursor: pointer;
     color:red;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 2em;
+}
+
+.filter-container select {
+    height: 50px;
+    background-color: #dc2828;
+    border: none;
+    color:white;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    padding:5px;
+    border-radius: 20px;
+}
+
+.filter-container select:hover, #typeFilter option:hover {
+ cursor: pointer;
+}
+
+
+
+.name-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:0.4em;
+}
+
+p{
+    color:black;
+}
+.add-pokemon{
+     color:red;
+    background-color: #ffffff;
+    border: 1px solid black;
+    padding-inline: 4px;
+    width: 20%;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.add-pokemon:hover {
+    cursor: pointer;
+}
+
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
