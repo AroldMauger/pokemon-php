@@ -2,18 +2,39 @@
 <html>
 <head>
     <title>POKEDEX</title>
+    <!-- Inclure Bootstrap CSS via CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+<header>
+    <img src="/logo.png" class="img-fluid my-4" id="logo" alt="Logo">
 
+</header>
+<main class="container text-center">
+    <h1>Choisissez une génération</h1>
+    <section class="gen-container">
+        <a class="gen-card" href="/generation/1">
+            <img src="/gen-1.webp">
+            <span>Génération 1</span>
+        </a>
+        <a class="gen-card" href="/generation/2">
+            <img src="/gen-2.webp">
+            <span>Génération 2</span>
+        </a>
+        <a class="gen-card" href="/generation/3">
+            <img src="/gen-3.webp">
+            <span>Génération 3</span>
+        </a>
+    </section>
 
-<h1>Choisissez une génération</h1>
-
-<ul>
-    <li><a href="/generation/1">Génération 1</a></li>
-    <li><a href="/generation/2">Génération 2</a></li>
-    <li><a href="/generation/3">Génération 3</a></li>
-
-</ul>
-
+</main>
+<!-- Inclure Bootstrap JS et dépendances via CDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

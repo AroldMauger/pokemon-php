@@ -1,3 +1,5 @@
+/* POKEDEX.TWIG */
+
 .all-pokemons{
     display: flex;
     flex-wrap: wrap;
@@ -10,4 +12,62 @@
 
 .pokemon-card p {
     text-align: center;
+}
+
+/*GEN_CHOICE.TWIG */
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
+main {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+#logo {
+    width: 20%;
+}
+
+.gen-container {
+    display: flex;
+    flex-direction: row;
+    gap:4em;
+
+}
+.gen-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid aqua;
+    border-radius: 20px;
+    box-shadow: 5px 5px #4e868c, 10px 10px #31def0;
+    position: relative;
+}
+
+.gen-card:hover {
+    opacity:0.6;
+    transition: ease-in-out 0.4s;
+}
+.gen-card img {
+    width: 400px;
+    border-radius: 20px;
+}
+
+.gen-card span {
+    position: absolute;
+    bottom: -20px;
+    color:#dc2828;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: 800;
+    border-radius: 20px;
+    padding-inline:2em;
 }
