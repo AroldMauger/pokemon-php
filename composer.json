@@ -1,0 +1,19 @@
+{
+    "name": "arold/pokedex",
+    "autoload": {
+        "psr-4": {
+            "Pokedex\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arold Mauger",
+            "email": "aroldmauger2022@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.11",
+        "altorouter/altorouter": "^2.0",
+        "ext-json" : "*"
+    }
+}

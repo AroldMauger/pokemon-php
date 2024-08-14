@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POKEDEX</title>
+</head>
+<body>
+
+
+<h1>Tous les pokémons de la génération {{ gen }}</h1>
+
+<section class="all-pokemons">
+    {% for pokemon in pokemons %}
+        <div class="pokemon-card">
+           <img src="{{ pokemon.image }}">
+            <p>{{ pokemon.name }}</p>
+        </div>
+    {% endfor %}
+</section>
+
+</body>
+</html>
