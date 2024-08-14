@@ -1,0 +1,13 @@
+.all-pokemons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.pokemon-card img {
+    width: 120px;
+}
+
+.pokemon-card p {
+    text-align: center;
+}
