@@ -1,13 +1,28 @@
 /* POKEDEX.TWIG */
 
-.nav-bar {
+body {
+    margin:0px;
+}
+header {
     display: flex;
     justify-content: space-between;
+    align-content: center;
+    align-self: center;
     align-items: center;
-    padding: 3em;
+    padding-right: 1em;
 }
 
-.nav-bar h1 {
+.header-pokedex {
+    margin-bottom: 2em;
+}
+header a {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    color:black;
+}
+header h1 {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 26px;
@@ -32,6 +47,8 @@
     flex-direction: row;
 }
 
+
+
 .pokemon-card img {
     width: 120px;
 }
@@ -55,7 +72,7 @@ h1 {
 
 main {
     font-family: "Open Sans", sans-serif;
-    margin-top: 4em;
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -67,7 +84,7 @@ main {
 
 .gen-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap:4em;
 
 }
@@ -223,7 +240,7 @@ main {
     background-color: #dc2828;
     border: none;
     color:white;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     padding:5px;
@@ -252,7 +269,7 @@ p{
     background-color: #ffffff;
     border: 1px solid black;
     padding-inline: 4px;
-    width: 20%;
+    width: 30%;
     text-align: center;
     font-size: 24px;
     margin-bottom: 4px;
@@ -260,6 +277,8 @@ p{
 
 .add-pokemon:hover {
     cursor: pointer;
+    background-color: red;
+    color:white;
 }
 
 .pokemon-container {

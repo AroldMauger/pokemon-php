@@ -10,11 +10,9 @@
 
 </head>
 <body>
-<header>
-    <nav class="nav-bar">
-        <h1>Tous les pokémons de la génération {{ gen }}</h1>
-        <a href="/">RETOUR</a>
-    </nav>
+<header class="header-pokedex">
+        <img src="/logo.png" class="img-fluid my-4" id="logo" alt="Logo">
+        <a href="/choice">Générations</a>
 </header>
 
 <div class="filter-container">
@@ -27,10 +25,8 @@
 <section class="all-pokemons">
     {% for pokemon in pokemons %}
         <div class="pokemon-container">
-            <span class="add-pokemon">+</span>
 
             <a href="#" class="pokemon-card" data-id="{{ pokemon.id }}" data-types="{{ pokemon.apiTypes | map(type => type.name) | join(', ') }}">
-
                 <img src="{{ pokemon.image }}">
                 <p>{{ pokemon.name }}</p>
             </a>

@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const pokemonDetails = document.getElementById('pokemonDetails');
                 pokemonDetails.innerHTML = '';
 
+                const addPokemon = document.createElement("span")
+                addPokemon.textContent = "Ajouter"
+                addPokemon.className = "add-pokemon"
+
                 const namePokemon = document.createElement('h2');
                 namePokemon.textContent = data.name;
                 namePokemon.className = "name-pokemon-modal";
@@ -54,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextBtn.textContent = ">";
                 nextBtn.className = "next-btn";
 
+                pokemonDetails.appendChild(addPokemon);
                 pokemonDetails.appendChild(namePokemon);
                 pokemonDetails.appendChild(imagePokemon);
                 pokemonDetails.appendChild(previousBtn);

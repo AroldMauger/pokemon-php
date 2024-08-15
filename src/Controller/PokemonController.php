@@ -9,9 +9,6 @@ class PokemonController
         $this->twig = $twig;
     }
 
-    public function showGenerationChoice(){
-        echo $this->twig->render("gen_choice.html.twig");
-    }
 
     public function getPokemonsFromAPI($gen){
         $pokemonsData = file_get_contents("https://pokebuildapi.fr/api/v1/pokemon/generation/$gen");
